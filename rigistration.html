@@ -1,0 +1,58 @@
+<html lang="en">
+<head><title>event</title>
+<script type="text/javascript">
+function x()
+{
+var name=document.myform.uname.value;
+var lname=document.myform.uname.value.length;
+var pwd=document.myform.psw.value;
+var lpwd=document.myform.psw.value.length;
+var cpwd=document.myform.cpsw.value;
+var g=document.myform.gender[0].checked;
+var h=document.myform.gender[1].checked;
+var addr=document.myform.add.value;
+if(name=="")
+{
+alert("please enter username");
+}
+else if(lname<5)
+{
+alert("please enter username more than 5 char");
+}
+else if(pwd=="")
+{
+alert("please enter password");
+}
+else if(lpwd<5)
+{
+alert("Password must contain minimum of 5 charecters");
+}
+else if(cpwd=="")
+{
+alert("please enter confirm password");
+}
+else if(pwd!=cpwd)
+{
+alert("password mismatch");
+}
+else if(g==false&&h==false)
+alert("choose gender");
+else if(addr=="")
+alert("Enter address");
+}
+</script>
+</head>
+<body align="center" bgcolor="aqua">
+<form name="myform">
+<h1> Registration form</h1>
+<label>Username:<input type="text" name="uname" size="20"/></label><br><br>
+<label>Password:<input type="password" name="psw" size="20"/></label><br><br>
+<label>Confirm password:<input type="password" name="cpsw" size="20"/></label><br><br>
+<label>Gender:<input type="radio" name="gender" value="male">Male</label><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="gender" value="Female">female</label><br><br>
+Adress:<textarea rows="5" cols="25"  name="add"></textarea><br><br>
+<input type="submit" value="submitform" onclick="x()" />
+</form>
+</body>
+</html>
